@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="ropa, tienda, moda, hombre, mujer">
+  <meta name="author" content="Vladimir Gonzalez">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <link rel="stylesheet" href="estilos_segundo_parcial.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logopag.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+
+  <title>Dropbox</title>
+ 
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top shadow-sm" id="mainNavbar">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <div class="logo-icon me-2">
+          <img src="logopag.png" alt="Logo" width="40" height="40">  <!--icono principal-->
+        </div>
+        <span class="fw-bold fs-4">Dropbox</span>
+      </a>
+
+      <!-- Botón menú móvil -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto me-3">
+         
+         
+            <li class="nav-item">
+            <a class="nav-link" href="index.html"><i class="bi bi-house me-1"></i>Inicio</a>
+          </li>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link active" href="productos.html"><i class="bi bi-file-text me-1"></i>productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="politicas_de_privacidad.html"><i class="bi bi-lock-fill me-2"></i>politicas de privacidad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactos.html"><i class="bi bi-envelope me-1"></i>Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="registro.html"><i class="bi bi-person-fill"></i>registro</a>
+          </li>
+          
+        </ul>
+
+        <!-- Modo oscuro -->
+        <button class="btn btn-outline-secondary me-2" id="darkModeToggle" title="Cambiar tema">
+          <i class="bi bi-moon-fill" id="darkModeIcon"></i>
+        </button>
+
+        <!-- Redes sociales -->
+        <div class="d-flex gap-2">
+          <a href="https://twitter.com/datatools" class="btn btn-outline-primary btn-sm" target="_blank">
+            <i class="bi bi-twitter"></i>
+          </a>
+          <a href="https://linkedin.com/company/datatools" class="btn btn-outline-primary btn-sm" target="_blank">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/datatools" class="btn btn-outline-primary btn-sm" target="_blank">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    </nav>
+
+
+    <div class="container d-flex justify-content-center my-4">
+  <form class="d-flex" role="search" style="max-width: 400px; width: 100%;">
+    <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
+    <button class="btn btn-outline-primary" type="submit">Buscar</button>
+  </form>
+</div>
+
+<div class="d-flex">
+  <!-- Sidebar izquierdo -->
+  <div class="bg-primary text-white p-3 vh-100 redondeo">
+    <div class="container mt-5">
+    
+  <div class="container my-5">
+    <h2 style="text-align: center;"class="mb-4">categorias</h2>
+
+    <div class="accordion" id="preguntasFrecuentes">
+
+      <!-- Pregunta 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="pregunta1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta1">
+            prendas
+          </button>
+        </h2>
+        <div id="respuesta1" class="accordion-collapse collapse" data-bs-parent="#preguntasFrecuentes">
+          <div class="accordion-body">
+            
+           <ul>
+            <li>t-shirts</li>
+            <li>pantalones</li>
+            <li>calzado</li>
+            <li>accesorios</li>
+            <li>ropa interior</li>
+            <li>otros</li>
+           </ul>
+
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="pregunta2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta2">
+            tallas
+          </button>
+        </h2>
+        <div id="respuesta2" class="accordion-collapse collapse" data-bs-parent="#preguntasFrecuentes">
+          <div class="accordion-body">
+            
+           <ul>
+            <li>xs</li>
+            <li>s</li>
+            <li>m</li>
+            <li>l</li>
+            <li>xl</li>
+            <li>xxl</li>
+           </ul>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="pregunta3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#respuesta3">
+            colores
+          </button>
+        </h2>
+        <div id="respuesta3" class="accordion-collapse collapse" data-bs-parent="#preguntasFrecuentes">
+          <div class="accordion-body">
+            <ul>
+            <li>azul</li>
+            <li>rojo</li>
+            <li>blanco</li>
+            <li>negro</li>
+            <li>verde</li>
+            <li>amarillo</li>
+           </ul>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+
+  
+  </div>
+
+
+  <!-- Contenedor derecho con secciones apiladas -->
+  <div class="flex-grow-1 bg-light vh-100 overflow-auto p-3">
+    <!-- Bloque 1 -->
+    <div class="bg-white p-4 mb-3 border rounded shadow-sm d-flex align-items-center integration-card">
+  <img src="https://i.pinimg.com/736x/c0/4b/06/c04b06afb00a072940e200a2b31a08d6.jpg" alt="Imagen ejemplo" class="img-fluid me-3 rounded" style="width: 100px; height: auto;">
+  <div>
+    <h5>nike air max 270</h5>
+    <p>precio: $22.99</p>
+  </div>
+</div>
+
+
+<div class="bg-white p-4 mb-3 border rounded shadow-sm d-flex align-items-center integration-card">
+  <img src="https://i.pinimg.com/736x/fa/ce/34/face3446af98a61fca6c772d79a1945e.jpg" alt="Imagen ejemplo" class="img-fluid me-3 rounded" style="width: 100px; height: auto;">
+  <div>
+    <h5>pantalon baggy color negro</h5>
+    <p>precio: $12.99</p>
+  </div>
+</div>
+
+
+<div class="bg-white p-4 mb-3 border rounded shadow-sm d-flex align-items-center integration-card">
+  <img src="https://i.pinimg.com/736x/81/11/27/811127fc3b06ed0d25fab4647ac7745e.jpg" alt="Imagen ejemplo" class="img-fluid me-3 rounded" style="width: 100px; height: auto;">
+  <div>
+    <h5>Sudadera con capucha</h5>
+    <p>precio: $10.50</p>
+  </div>
+</div>
+
+
+<div class="bg-white p-4 mb-3 border rounded shadow-sm d-flex align-items-center integration-card">
+  <img src="https://i.pinimg.com/736x/54/9c/e2/549ce242b4cb4591fac9a8e168965185.jpg" alt="Imagen ejemplo" class="img-fluid me-3 rounded" style="width: 100px; height: auto;">
+  <div>
+    <h5>jordan 4 retro rojo</h5>
+    <p>precio: $42.99</p>
+  </div>
+</div>
+
+
+<div class="bg-white p-4 mb-3 border rounded shadow-sm d-flex align-items-center integration-card">
+  <img src="https://i.pinimg.com/736x/48/7e/c3/487ec303850fae973c9facf9f4bf63e4.jpg" alt="Imagen ejemplo" class="img-fluid me-3 rounded" style="width: 100px; height: auto;">
+  <div>
+    <h5>pulcera mixta</h5>
+    <p>precio: $3.50</p>
+  </div>
+</div>
+
+
+<div class="bg-white p-4 mb-3 border rounded shadow-sm d-flex align-items-center integration-card">
+  <img src="https://i.pinimg.com/736x/f6/1e/63/f61e6366bd935df93c1c5aab568ab9ba.jpg" alt="Imagen ejemplo" class="img-fluid me-3 rounded" style="width: 100px; height: auto;">
+  <div>
+    <h5>hoddie morado</h5>
+    <p>precio: $9.99</p>
+  </div>
+</div>
+
+<div class="bg-white p-4 mb-3 border rounded shadow-sm d-flex align-items-center integration-card">
+  <img src="https://i.pinimg.com/736x/1a/38/01/1a38010546c589f0950e505c4e457d96.jpg" alt="Imagen ejemplo" class="img-fluid me-3 rounded" style="width: 100px; height: auto;">
+  <div>
+    <h5>camiseta verde</h5>
+    <p>precio: $7.49</p>
+  </div>
+</div>
+
+<div class="bg-white p-4 mb-3 border rounded shadow-sm d-flex align-items-center integration-card">
+  <img src="https://i.pinimg.com/736x/75/f8/9e/75f89e61302e0b066b1a308d411225ae.jpg" alt="Imagen ejemplo" class="img-fluid me-3 rounded" style="width: 100px; height: auto;">
+  <div>
+    <h5>cadena negra</h5>
+    <p>precio: $4.50</p>
+  </div>
+</div>
+
+<div class="bg-white p-4 mb-3 border rounded shadow-sm d-flex align-items-center integration-card">
+  <img src="https://i.pinimg.com/736x/94/18/8a/94188a1f47e42415960208217ac603cb.jpg" alt="Imagen ejemplo" class="img-fluid me-3 rounded" style="width: 100px; height: auto;">
+  <div>
+    <h5>camisa morada</h5>
+    <p>precio: $5.33</p>
+  </div>
+</div>
+
+<footer style="border-radius: 5px;" class="bg-primary text-white py-3 mt-5">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      
+      <!-- Nombre de la página -->
+      <div class="mb-2 mb-md-0 fw-bold">
+        Dropbox © 2025
+      </div>
+      
+      <!-- Redes sociales -->
+      <div class="d-flex gap-3">
+        <a href="#" class="text-white text-decoration-none" title="Facebook">
+          <i class="bi bi-facebook fs-5"></i>
+        </a>
+        <a href="#" class="text-white text-decoration-none" title="Twitter">
+          <i class="bi bi-twitter fs-5"></i>
+        </a>
+        <a href="#" class="text-white text-decoration-none" title="Instagram">
+          <i class="bi bi-instagram fs-5"></i>
+        </a>
+        <a href="#" class="text-white text-decoration-none" title="LinkedIn">
+          <i class="bi bi-linkedin fs-5"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script_segundo_parcial.js"></script>
+    </body>
+    </html>

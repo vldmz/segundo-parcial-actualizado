@@ -1,0 +1,608 @@
+    /* Fondo gris general 
+    body, html {
+      background-color: rgb(64, 75, 75);
+      margin: 0;
+      padding: 0;
+    }
+*/
+    .navbar_option {
+      background-color: rgb(68, 64, 64);
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    .material-icons {
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    .cuadro_gris {
+      background-color: #dee2e6;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+/*
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+      line-height: 60px;
+      color: white !important;
+    }
+
+*/
+
+
+    /* Eliminar espacio adicional */
+    .container {
+      margin-top: 20px;
+    }
+
+
+    :root {
+    --primary-color: #007acc;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --warning-color: #ffc107;
+    --danger-color: #dc3545;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    
+    /* Colores de fondo */
+    --bg-color: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-color: #212529;
+    --text-muted: #6c757d;
+    --border-color: #dee2e6;
+    
+    /* Sombras */
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+/* Modo oscuro */
+[data-bs-theme="dark"] {
+    --bg-color: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-color: #ffffff;
+    --text-muted: #adb5bd;
+    --border-color: #495057;
+}
+
+/* Fuentes personalizadas */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+/* Logo personalizado */
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+/* Navbar personalizada */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(248, 249, 250, 0.95) !important;
+}
+
+[data-bs-theme="dark"] .navbar {
+    background-color: rgba(18, 18, 18, 0.95) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin: 0 2px;
+}
+
+.nav-link:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    transform: translateY(-1px);
+}
+
+.nav-link.active {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+/* Sección hero */
+.hero-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 100vh;
+}
+
+[data-bs-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+}
+
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Efectos hover */
+.hover-effect {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.hover-effect:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hover-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.hover-effect:hover::before {
+    left: 100%;
+}
+
+/* Carrusel personalizado */
+.carousel-inner {
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.dashboard-preview,
+.integration-preview,
+.reports-preview {
+    min-height: 200px;
+    border-radius: 12px;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+}
+
+.bg-gradient-success {
+    background: linear-gradient(135deg, var(--success-color), #146c43);
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, var(--warning-color), #e09900);
+}
+
+/* Estadísticas animadas */
+.stats-section {
+    background-color: var(--bg-secondary);
+}
+
+.stat-card {
+    padding: 2rem 1rem;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover .stat-icon {
+    transform: scale(1.1);
+}
+
+/* Counter animation será manejada por JavaScript */
+.counter {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+/* Cards de dashboard */
+.dashboard-card {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.dashboard-preview-mini {
+    height: 80px;
+    background: rgba(var(--bs-primary-rgb), 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cards de integración */
+.integration-card {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.integration-card:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.integration-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 1rem;
+}
+
+/* Formularios */
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(var(--bs-primary-rgb), 0.25);
+}
+
+/* Modales */
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 16px 16px 0 0;
+}
+
+/* Alertas personalizadas */
+.alert {
+    border: none;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+/* Tablas */
+.table {
+    background-color: var(--bg-color);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(var(--bs-primary-rgb), 0.075);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: auto;
+        padding: 3rem 0;
+    }
+    
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    
+    .stat-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .counter {
+        font-size: 2rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease-out;
+}
+
+/* Personalización del scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Utilidades adicionales */
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.border-gradient {
+    border: 2px solid;
+    border-image: linear-gradient(135deg, var(--primary-color), #0056b3) 1;
+}
+
+/* Loading spinner personalizado */
+.spinner-custom {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(var(--bs-primary-rgb), 0.1);
+    border-left-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Toasts personalizados */
+.toast {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+/* Progreso personalizado */
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+.progress-bar {
+    border-radius: 4px;
+}
+
+/* Badges personalizados */
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.025em;
+}
+
+/* Botones personalizados */
+.btn {
+    font-weight: 500;
+    letter-spacing: 0.025em;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary-color), #0056b3);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0056b3, var(--primary-color));
+    transform: translateY(-1px);
+}
+
+/* Efectos de carga */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Ocultar elementos hasta que se cargue JavaScript */
+.js-hidden {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.js-visible {
+    opacity: 1;
+}
+
+
+
+
+
+ body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    body.dark-mode .navbar {
+      background-color: #1f1f1f !important;
+    }
+
+    .navbar-nav .nav-link {
+      transition: color 0.3s ease;
+    }
+
+    .dark-mode .nav-link,
+    .dark-mode .navbar-brand,
+    .dark-mode .btn-outline-secondary {
+      color: #fff !important;
+    }
+
+    .dark-mode .btn-outline-secondary {
+      border-color: #fff;
+    }
+
+
+.modal-posicion-custom .modal-dialog {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    margin: 0;
+  }
+
+
+
+
+
+
+
+  /* Modo claro */
+#mainNavbar .nav-link,
+#mainNavbar .navbar-brand,
+#mainNavbar .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+/* Modo oscuro */
+body.dark-mode #mainNavbar {
+  background-color: #212529 !important;
+}
+
+body.dark-mode #mainNavbar .nav-link,
+body.dark-mode #mainNavbar .navbar-brand,
+body.dark-mode #mainNavbar .navbar-nav .nav-link {
+  color: #fff !important;
+}
+
+.redondeo{
+    border-radius: 8px;
+    width: 250px;
+}
+
+
+
+
+
+
+
+/* Modo oscuro general */
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+/* Navbar en modo oscuro */
+body.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
+
+body.dark-mode .navbar .nav-link {
+  color: #f1f1f1 !important;
+}
+
+/* Sidebar */
+body.dark-mode .bg-primary {
+  background-color: #0d6efd !important; /* Puedes oscurecer más si deseas */
+}
+
+/* Contenedor principal y bloques */
+body.dark-mode .bg-light {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .bg-white {
+  background-color: #2c2c2c !important;
+  color: #f1f1f1;
+}
+
+/* Botones */
+body.dark-mode .btn-outline-primary {
+  border-color: #90caf9;
+  color: #90caf9;
+}
+body.dark-mode .btn-outline-primary:hover {
+  background-color: #90caf9;
+  color: black;
+}
+
+.list-categorias{
+
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: inline;
+    
+}
+
+.fondo-registro{
+    background-image: url('https://i.pinimg.com/736x/1c/22/3e/1c223ed1e8871fb269c201d2fbe7f1f1.jpg');
+    background-repeat: repeat;
+}
+
+.fondo-contacto{
+    background-image: url('https://i.pinimg.com/736x/b6/2c/64/b62c648c8e6be7116566d880a5e8e3d0.jpg');
+    background-repeat: repeat;
+}
